@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import UnitDetail from './components/unit-detail';
+
+const UNIT_ID = '1230942834234'
 
 function App() {
+  const [showDetail, setShowDetail] = useState(true)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <button onClick={() => setShowDetail(true)}>show detail</button>
+      {showDetail && <UnitDetail unitId={UNIT_ID} oncClose={() => setShowDetail(false)} />}
     </div>
   );
 }
