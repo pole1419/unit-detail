@@ -60,7 +60,7 @@ $grey: #4B4F54;
                 @include cursor;
                 margin-bottom: 40px;
                 position: relative;
-                &:active {
+                &.active {
                     font-weight: bold;
                 }
                 &:last-child {
@@ -74,7 +74,7 @@ $grey: #4B4F54;
                     position: absolute;
                     bottom: -25px;
                     left: 50%;
-                    transform: translate(-50%) rotate(180deg);
+                    transform: translate(-50%) rotate(180deg) scaleX(1.8);
                 }
             }
         }
